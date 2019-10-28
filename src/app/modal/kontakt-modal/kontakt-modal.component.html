@@ -19,13 +19,6 @@
               <label for="form29">E-Mail</label>
             </div>
 
-            <div class="md-form mb-5">
-              <mdb-icon fas icon="tag" class="prefix grey-text"></mdb-icon>
-              <input type="text" id="form32" class="form-control" mdbInput mdbValidate
-                     [formControl]="contactFormModalSubject">
-              <label for="form32">Betreff</label>
-            </div>
-
             <div class="md-form">
               <mdb-icon fas icon="pencil-alt" class="prefix grey-text"></mdb-icon>
               <textarea type="text" id="form8" class="md-textarea form-control" rows="2" mdbInput mdbValidate
@@ -64,60 +57,3 @@
     </mdb-tabset>
   </div>
 </div>
-<!--/.Content-->
-
-
-<!--
-<div class="modal-content">
-  <mdb-tabset [buttonClass]="'nav md-tabs tabs-2 warning-color'" [contentClass]="''" class="tab-content">
-    <mdb-tab class="tab-pane fade in show active" heading="<i class='fas fa-envelope'></i> Nachricht senden" id="panel1" role="tabpanel">
-      <div class="modal-body mb-1">
-        <div class="md-form mb-5">
-          <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
-          <input type="text" id="form34" class="form-control" mdbInput mdbValidate [formControl]="contactFormModalName">
-          <label for="form34">Name</label>
-        </div>
-
-        <div class="md-form mb-5">
-          <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
-          <input type="email" id="form29" class="form-control" mdbInput mdbValidate
-                 [formControl]="contactFormModalEmail">
-          <label for="form29">E-Mail</label>
-        </div>
-
-        <div class="md-form mb-5">
-          <mdb-icon fas icon="tag" class="prefix grey-text"></mdb-icon>
-          <input type="text" id="form32" class="form-control" mdbInput mdbValidate
-                 [formControl]="contactFormModalSubject">
-          <label for="form32">Betreff</label>
-        </div>
-
-        <div class="md-form">
-          <mdb-icon fas icon="pencil-alt" class="prefix grey-text"></mdb-icon>
-          <textarea type="text" id="form8" class="md-textarea form-control" rows="3" mdbInput mdbValidate
-                    [formControl]="contactFormModalMessage"></textarea>
-          <label for="form8">Nachricht</label>
-        </div>
-
-        <div class="md-form">
-          <mdb-checkbox formControlName="contactFormCopy">Eine Kopie dieser Nachricht an meine E-Mail senden?</mdb-checkbox>
-        </div>
-
-      </div>
-    </mdb-tab>
-    <mdb-tab class="tab-pane fade" heading="<i class='fas fa-phone-alt'></i> Anrufen" id="panel2" role="tabpanel"></mdb-tab>
-    <mdb-tab class="tab-pane fade" heading="<i class='fas fa-user'></i> Persönlicher Termin" id="panel3" role="tabpanel"></mdb-tab>
-  </mdb-tabset>
-&lt;!&ndash;  <div class="modal-header text-center warning-color">
-    <h4 class="modal-title white-text w-100 font-weight-bold py-2">Schreiben sie uns</h4>
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true" class="white-text">&times;</span>
-    </button>
-  </div>&ndash;&gt;
-  <div class="modal-footer d-flex justify-content-center">
-    <button mdbBtn color="warning" class="waves-light" mdbWavesEffect [disabled]="contactFormModalName.invalid || contactFormModalEmail.invalid || contactFormModalMessage.invalid" (click)="onSend()">Senden
-      <mdb-icon far icon="paper-plane" class="ml-1"></mdb-icon>
-    </button>
-  </div>
-</div>
--->
