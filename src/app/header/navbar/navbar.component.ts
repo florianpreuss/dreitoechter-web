@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MDBModalRef, MDBModalService} from 'ng-uikit-pro-standard';
 import {KontaktModalComponent} from '../../modal/kontakt-modal/kontakt-modal.component';
+import {ImpressumModalComponent} from '../../modal/impressum-modal/impressum-modal.component';
 
 @Component({
   selector: 'app-navbar',
@@ -8,13 +9,21 @@ import {KontaktModalComponent} from '../../modal/kontakt-modal/kontakt-modal.com
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  modalRef: MDBModalRef;
+  contactModalRef: MDBModalRef;
+  standortModalRef: MDBModalRef;
 
   constructor(private modalService: MDBModalService) { }
 
   openContact() {
-    this.modalRef = this.modalService.show(KontaktModalComponent,   {
+    this.contactModalRef = this.modalService.show(KontaktModalComponent,   {
       class: 'modal-lg cascading-modal',
+      containerClass: 'modal fade top',
+    });
+  }
+
+  openImpressum() {
+    this.standortModalRef = this.modalService.show(ImpressumModalComponent,   {
+      class: 'modal-lg',
       containerClass: 'modal fade top',
     });
   }

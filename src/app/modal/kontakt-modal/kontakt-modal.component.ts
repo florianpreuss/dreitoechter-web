@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {MDBModalRef} from 'ng-uikit-pro-standard';
+import {MDBModalRef, MDBModalService} from 'ng-uikit-pro-standard';
 
 @Component({
   selector: 'app-contact-modal',
@@ -11,7 +11,9 @@ export class KontaktModalComponent implements OnInit {
 
   validatingForm: FormGroup;
 
-  constructor(public modalRef: MDBModalRef) {}
+  successModal: MDBModalRef;
+
+  constructor(public modalRef: MDBModalRef, private modalService: MDBModalService) {}
 
   ngOnInit() {
     this.validatingForm = new FormGroup({
@@ -31,36 +33,12 @@ export class KontaktModalComponent implements OnInit {
     this.modalRef.hide();
   }
 
-  get modalFormLoginEmail() {
-    return this.validatingForm.get('modalFormLoginEmail');
-  }
-
-  get modalFormLoginPassword() {
-    return this.validatingForm.get('modalFormLoginPassword');
-  }
-
-  get modalFormRegisterEmail() {
-    return this.validatingForm.get('modalFormRegisterEmail');
-  }
-
-  get modalFormRegisterPassword() {
-    return this.validatingForm.get('modalFormRegisterPassword');
-  }
-
-  get modalFormRegisterRepeatPassword() {
-    return this.validatingForm.get('modalFormRegisterRepeatPassword');
-  }
-
   get contactFormModalName() {
     return this.validatingForm.get('contactFormModalName');
   }
 
   get contactFormModalEmail() {
     return this.validatingForm.get('contactFormModalEmail');
-  }
-
-  get contactFormModalSubject() {
-    return this.validatingForm.get('contactFormModalSubject');
   }
 
   get contactFormModalMessage() {

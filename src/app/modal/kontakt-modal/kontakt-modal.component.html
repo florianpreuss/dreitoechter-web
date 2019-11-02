@@ -2,27 +2,26 @@
   <div class="modal-c-tabs">
     <mdb-tabset [buttonClass]="'nav md-tabs tabs-2 warning-color'" [contentClass]="''" class="tab-content">
       <mdb-tab class="tab-pane fade in show active" id="panel1" role="tabpanel"
-               heading="<i class='fas fa-envelope'></i> Nachricht senden">
+               heading="<i class='fas fa-envelope'> </i> Nachricht senden">
         <div class="modal-body mb-1">
           <form [formGroup]="validatingForm">
             <div class="md-form mb-5">
               <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
-              <input type="text" id="form34" class="form-control" mdbInput mdbValidate
+              <input type="text" id="form34" class="form-control" mdbInput
                      [formControl]="contactFormModalName">
               <label for="form34">Name</label>
             </div>
 
             <div class="md-form mb-5">
               <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
-              <input type="email" id="form29" class="form-control" mdbInput mdbValidate
+              <input type="email" id="form29" class="form-control" mdbInput
                      [formControl]="contactFormModalEmail">
               <label for="form29">E-Mail</label>
             </div>
 
             <div class="md-form">
               <mdb-icon fas icon="pencil-alt" class="prefix grey-text"></mdb-icon>
-              <textarea type="text" id="form8" class="md-textarea form-control" rows="2" mdbInput mdbValidate
-                        [formControl]="contactFormModalMessage"></textarea>
+              <textarea type="text" id="form8" class="md-textarea form-control" rows="2" mdbInput></textarea>
               <label for="form8">Nachricht</label>
             </div>
 
@@ -33,21 +32,20 @@
 
           <div class="text-center mt-2">
             <button mdbBtn color="warning" class="waves-light" mdbWavesEffect
-                    [disabled]="contactFormModalName.invalid || contactFormModalEmail.invalid || contactFormModalMessage.invalid"
                     (click)="onSend()">Senden
               <mdb-icon far icon="paper-plane" class="ml-1"></mdb-icon>
             </button>
           </div>
         </div>
       </mdb-tab>
-      <mdb-tab class="tab-pane fade" id="panel2" role="tabpanel" heading="<i class='fas fa-phone-alt'></i> Anrufen">
+      <mdb-tab class="tab-pane fade" id="panel2" role="tabpanel" heading="<i class='fas fa-phone-alt'> </i> Anrufen">
         <div class="modal-body mb-1">
           <form [formGroup]="validatingForm">
 
           </form>
         </div>
       </mdb-tab>
-      <mdb-tab class="tab-pane fade" id="panel3" role="tabpanel" heading="<i class='fas fa-user'></i> Termin vereinbaren">
+      <mdb-tab class="tab-pane fade" id="panel3" role="tabpanel" heading="<i class='fas fa-user'> </i> Termin vereinbaren">
         <div class="modal-body mb-1">
           <form [formGroup]="validatingForm">
 

@@ -1,24 +1,21 @@
-<mdb-navbar SideClass="navbar navbar-expand-lg blue-grey lighten-5 indigo navbar-light" containerInside="false">
-  <mdb-navbar-brand>
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-light yellow accent-3 ie-nav ptb-3" style="padding-top: 20px; padding-bottom: 20px" [containerInside]="false">
+  <mdb-navbar-brand class="nav-media-brand">
     <a class="navbar-brand" routerLink="">
-      <img
-        src="https://www.dreitoechter.de/wp-content/uploads/2017/07/Logo_Pflegestation_Drei_Toechter-e1499160067349.png"
-        height="10%" alt="">
+      <img src="https://www.dreitoechter.de/wp-content/uploads/2017/07/Logo_Pflegestation_Drei_Toechter-e1499160067349.png"
+        class="nav-media-brand" alt="">
     </a>
   </mdb-navbar-brand>
 
-  <links>
+  <links style="font-size: 1.1rem">
     <ul class="navbar-nav mr-auto">
+
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link waves-light" routerLink="leistungen" mdbWavesEffect>Leistungen</a>
       </li>
 
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link waves-light" routerLink="wohngemeinschaften" mdbWavesEffect>Wohngemeinschaften</a>
-      </li>
-
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link waves-light" routerLink="kosten" mdbWavesEffect>Kosten</a>
+        <a class="nav-link waves-light nav-media-1d" routerLink="wohngemeinschaften" mdbWavesEffect>Wohngemeinschaften für Senioren</a>
+        <a class="nav-link waves-light nav-media-1" routerLink="wohngemeinschaften" mdbWavesEffect>Wohngemeinschaften</a>
       </li>
 
       <li class="nav-item" routerLinkActive="active">
@@ -29,17 +26,16 @@
         <a class="nav-link waves-light" routerLink="aktuelles" mdbWavesEffect>Aktuelles</a>
       </li>
     </ul>
-
     <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item" (click)="openContact()">
-        <a class="nav-link">
-          <mdb-icon fas icon="envelope"></mdb-icon>
-          Kontakt</a>
+        <a class="nav-media-2d nav-link"><mdb-icon fas icon="envelope"></mdb-icon>Kontakt</a>
+        <a class="nav-media-2 nav-link"><mdb-icon fas icon="envelope"></mdb-icon></a>
+
+      </li>
+      <li class="nav-item" (click)="openImpressum()">
+        <a class="nav-media-3d nav-link"><mdb-icon fas icon="align-justify"></mdb-icon>Impressum</a>
+        <a class="nav-media-3 nav-link"><mdb-icon fas icon="align-justify"></mdb-icon></a>
       </li>
     </ul>
-    <div class="md-form my-0">
-      <button mdbBtn type="button" color="warning" rounded="true" mdbWavesEffect (click)="frame.show()">
-        Standort prüfen <mdb-icon fas icon="map-marker-alt"></mdb-icon></button>
-    </div>
   </links>
 </mdb-navbar>

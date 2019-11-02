@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+.ptb-3 {
+  padding: 0.8rem 1.2rem !important;
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.9rem;
+    padding-left: 0.9rem;
+  }
+}
+
+.nav-media-1 {
+  display: none !important;
+}
+.nav-media-2 {
+  display: none !important;
+}
+.nav-media-3 {
+  display: none !important;
+}
+.nav-media-4 {
+  display: none !important;
+}
+.nav-media-1d {
+  display: block !important;
+}
+.nav-media-2d {
+  display: block !important;
+}
+.nav-media-3d {
+  display: block !important;
+}
+.nav-media-4d {
+  display: block !important;
+}
+
+.nav-media-brand {
+  height: 80px !important;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 1380px) and (min-width: 990px) {
+  .nav-media-1 {
+    display: block !important;
+  }
+  .nav-media-1d {
+    display: none !important;
+  }
+  .nav-media-brand {
+    height: 75px !important;
+    padding-right: 5px
+  }
+}
+
+@media screen and (max-width: 1235px) and (min-width: 990px) {
+  .nav-media-2 {
+    display: block !important;
+  }
+  .nav-media-2d {
+    display: none !important;
+  }
+  .nav-media-brand {
+    height: 68px !important;
+    padding-right: 2px;
+  }
+}
+
+@media screen and (max-width: 1140px) and (min-width: 990px) {
+  .nav-media-3 {
+    display: block !important;
+  }
+  .nav-media-3d {
+    display: none !important;
+  }
+  .nav-media-brand {
+    height: 60px !important;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .nav-media-brand {
+    height: 60px !important;
+    padding-right: 0px;
+  }
+}
