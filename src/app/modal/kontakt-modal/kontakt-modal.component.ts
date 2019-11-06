@@ -19,13 +19,7 @@ export class KontaktModalComponent implements OnInit {
     this.validatingForm = new FormGroup({
       contactFormModalName: new FormControl('', Validators.required),
       contactFormModalEmail: new FormControl('', Validators.email),
-      contactFormModalSubject: new FormControl('', Validators.required),
       contactFormModalMessage: new FormControl('', Validators.required),
-      modalFormLoginEmail: new FormControl('', Validators.email),
-      modalFormLoginPassword: new FormControl('', Validators.required),
-      modalFormRegisterEmail: new FormControl('', Validators.email),
-      modalFormRegisterPassword: new FormControl('', Validators.required),
-      modalFormRegisterRepeatPassword: new FormControl('', Validators.required)
     });
   }
 
