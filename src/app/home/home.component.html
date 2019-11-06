@@ -1,43 +1,189 @@
-<mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
-  <mdb-carousel-item>
-    <div class="view w-100">
-      <img class="d-block w-100" src="https://www.dreitoechter.de/wp-content/uploads/2017/10/drei_toechter_pflegedienst_slider_1.jpg" alt="First slide">
-    </div>
-    <div class="carousel-caption">
-    </div>
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <div class="view w-100">
-      <img class="d-block w-100" src="https://www.dreitoechter.de/wp-content/uploads/2017/10/drei_toechter_pflegedienst_slider_2.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-caption">
-    </div>
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <div class="view w-100">
-      <img class="d-block w-100" src="https://www.dreitoechter.de/wp-content/uploads/2017/10/drei_toechter_pflegedienst_slider_4.jpg" alt="Third slide">
-    </div>
-    <div class="carousel-caption">
-    </div>
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <div class="view w-100">
-      <img class="d-block w-100" src="/assets/media/slider-4.png" alt="Second slide">
-    </div>
-    <div class="carousel-caption">
-    </div>
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <div class="view w-100">
-      <img class="d-block w-100" src="/assets/media/slider-4.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-caption">
-    </div>
-  </mdb-carousel-item>
-</mdb-carousel>
-<section>
+<div class="page-layout cloudy-knoxville-gradient">
+  <mdb-carousel #carousel class="carousel slide" [noPause]="true" [animation]="'slide'">
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="/assets/media/slider/slider-1.jpg" alt="First slide">
+      </div>
+      <div class="carousel-caption">
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="/assets/media/slider/slider-2.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-caption">
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="/assets/media/slider/slider-3.jpg" alt="Third slide">
+      </div>
+      <div class="carousel-caption">
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="/assets/media/slider/slider-4.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-caption">
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="/assets/media/slider/slider-5.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-caption">
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+  <main>
+      <section>
+<!--        <div class="wow fadeIn">
+          &lt;!&ndash;Section heading&ndash;&gt;
+          <h2 class="h1 text-center pt-2 pb-2 mt-5 mb-5">Überblick</h2>
+          &lt;!&ndash;Section description&ndash;&gt;
+        </div>-->
+        <div class="row wow fadeIn mt-4 ml-3 mr-3">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4">
 
-  <div class="container-fluid">
-  </div>
+            <!--Card-->
+            <mdb-card>
 
-</section>
+              <!--Card image-->
+              <div class="view overlay waves-light card-img-220" mdbWavesEffect>
+                <img src="/assets/media/card/card-home-1.jpg" class="card-img-top" alt="">
+                <a routerLink="leistungen">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <!--Card content-->
+              <div class="card-body">
+                <!--Title-->
+                <a class="activator px-3 mr-2">
+                  <mdb-icon fas icon="layer-group"></mdb-icon>
+                </a>
+
+                <!--Title-->
+                <mdb-card-title>
+                  <h4>Unsere Leistungen</h4>
+                </mdb-card-title>
+
+                <hr>
+                <!--Text-->
+                <mdb-card-text>
+                  Die Leistungen erbringen wir rund um die Uhr für alle Mitglieder der Pflege- und
+                  Krankenkassen sowie Privatzahler und Menschen, für deren Pflegekosten das Sozialamt aufkommt.
+                </mdb-card-text>
+                <a class="link-text black-text d-flex justify-content-end" routerLink="leistungen">
+                  <h5 class="waves-light" mdbWavesEffect>Mehr erfahren
+                    <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon>
+                  </h5>
+                </a>
+              </div>
+            </mdb-card>
+          </div>
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4">
+
+            <!--Card-->
+            <mdb-card>
+              <!--Card image-->
+              <div class="view overlay waves-light card-img-220" mdbWavesEffect>
+                <img src="/assets/media/card/card-home-2.jpg" class="card-img-top" alt="">
+                <a routerLink="wohngemeinschaften" target="_blank">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <!--Card content-->
+              <mdb-card-body>
+                <a class="activator px-3 mr-2">
+                  <mdb-icon fas icon="home"></mdb-icon>
+                </a>
+
+                <!--Title-->
+                <mdb-card-title>
+                  <h4>Senioren-Wohngemeinschaften</h4>
+                </mdb-card-title>
+
+                <hr>
+
+                <mdb-card-text>
+                  Wer in einer Senioren-WG wohnt, die ambulant betreut wird, kann nicht nur von einer fürsorglichen und
+                  fachkundigen Pflege profitieren. Vielmehr können die Bewohner immer selbst entscheiden ...
+                </mdb-card-text>
+
+                <a class="link-text black-text d-flex justify-content-end" routerLink="wohngemeinschaften">
+                  <h5 class="waves-light" mdbWavesEffect>Mehr erfahren
+                    <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon>
+                  </h5>
+                </a>
+              </mdb-card-body>
+            </mdb-card>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+
+            <!--Card-->
+            <mdb-card>
+              <!--Card image-->
+              <div class="view overlay waves-light card-img-220" mdbWavesEffect>
+                <img src="/assets/media/card/card-home-3.jpg" class="card-img-top" alt="">
+                <a routerLink="about" target="_blank">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <!--Card content-->
+              <mdb-card-body>
+                  <a class="activator px-3 mr-2">
+                    <mdb-icon fas icon="users"></mdb-icon>
+                  </a>
+
+                  <!--Title-->
+                  <mdb-card-title>
+                    <h4>Über uns</h4>
+                  </mdb-card-title>
+
+                <hr>
+
+                  <mdb-card-text>
+                    Wir können auf über 15 Jahre der Erfahrung im Pflegebereich zurückblicken und stehen Ihnen mit unserem geballten Know-how zur Seite. Unsere examinierten Pflegefachkräfte bringen ...
+                  </mdb-card-text>
+
+                  <a class="link-text black-text d-flex justify-content-end" routerLink="about">
+                    <h5 class="waves-light" mdbWavesEffect>Mehr erfahren
+                      <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon>
+                    </h5>
+                  </a>
+              </mdb-card-body>
+            </mdb-card>
+          </div>
+        </div>
+
+        <hr>
+
+
+
+<!--          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card narrower">
+
+                <div class="view view-cascade">
+                  <div id="map-container-google-8" class="z-depth-1-half map-container-5">
+                    <iframe src="https://maps.google.com/maps?q=Barcelona&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                  </div>
+                </div>
+
+                <div class="card-body card-body-cascade text-center">
+
+                </div>
+              </div>
+            </div>
+          </div>-->
+      </section>
+  </main>
+</div>

@@ -1,3 +1,28 @@
 .view {
-  max-height: 600px;
+  max-height: 650px;
+}
+.card-img-220 {
+  height: 220px;
+}
+.page-layout {
+  background-color: #ffea00;
+}
+.card-body .h4 .h6 {
+  font-weight: 400 !important;
+}
+.body {
+  font-weight: 400 !important;
+}
+.map-container-5{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-container-5 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
 }
