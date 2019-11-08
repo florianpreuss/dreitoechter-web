@@ -43,130 +43,113 @@
           <h2 class="h1 text-center pt-2 pb-2 mt-5 mb-5">Überblick</h2>
           &lt;!&ndash;Section description&ndash;&gt;
         </div>-->
-        <div class="row wow fadeIn mt-4 ml-3 mr-3">
           <!--Grid column-->
-          <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card-deck mt-5 mb-5 ml-3 mr-3">
+          <mdb-card>
 
-            <!--Card-->
-            <mdb-card>
+            <!--Card image-->
+            <div class="view overlay waves-light card-img-220" mdbWavesEffect>
+              <img src="/assets/media/card/card-home-1.jpg" class="card-img-top" alt="">
+              <a routerLink="leistungen"><div class="mask rgba-white-slight"></div></a>
+            </div>
 
-              <!--Card image-->
-              <div class="view overlay waves-light card-img-220" mdbWavesEffect>
-                <img src="/assets/media/card/card-home-1.jpg" class="card-img-top" alt="">
-                <a routerLink="leistungen">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
+            <!--Card content-->
+            <mdb-card-body>
+              <!--Title-->
+              <a class="activator px-3 mr-2 black-text" routerLink="leistungen">
+                <mdb-icon fas icon="layer-group"></mdb-icon>
+              </a>
 
-              <!--Card content-->
-              <div class="card-body">
-                <!--Title-->
-                <a class="activator px-3 mr-2">
-                  <mdb-icon fas icon="layer-group"></mdb-icon>
-                </a>
+              <!--Title-->
+              <mdb-card-title>
+                <h4>Leistungen</h4>
+              </mdb-card-title>
 
-                <!--Title-->
-                <mdb-card-title>
-                  <h4>Unsere Leistungen</h4>
-                </mdb-card-title>
+              <hr>
+              <!--Text-->
+              <mdb-card-text>
+                Die Leistungen erbringen wir rund um die Uhr für alle Mitglieder der Pflege- und
+                Krankenkassen sowie Privatzahler und Menschen, für deren Pflegekosten das Sozialamt aufkommt.
+                <nobr><a class="black-text" routerLink="leistungen"> <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon> weiter lesen
+                </a></nobr>
+              </mdb-card-text>
+            </mdb-card-body>
+            <div class="text-center align-bottom footer-card">
+              <button mdbBtn class="waves-light" style="background-color: #ffea00;" routerLink="leistungen" [rounded]="true" mdbWavesEffect>
+                <mdb-icon fas icon="layer-group" class="mr-1"></mdb-icon> Leistungen
+              </button>
+            </div>
+          </mdb-card>
+          <mdb-card>
+            <!--Card image-->
+            <div class="view overlay waves-light card-img-220" mdbWavesEffect>
+              <img src="/assets/media/card/card-home-2.jpg" class="card-img-top" alt="">
+              <a routerLink="wohngemeinschaften!"><div class="mask rgba-white-slight"></div></a>
+            </div>
 
-                <hr>
-                <!--Text-->
-                <mdb-card-text>
-                  Die Leistungen erbringen wir rund um die Uhr für alle Mitglieder der Pflege- und
-                  Krankenkassen sowie Privatzahler und Menschen, für deren Pflegekosten das Sozialamt aufkommt.
-                </mdb-card-text>
-                <a class="link-text black-text d-flex justify-content-end" routerLink="leistungen">
-                  <h5 class="waves-light" mdbWavesEffect>Mehr erfahren
-                    <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon>
-                  </h5>
-                </a>
-              </div>
-            </mdb-card>
-          </div>
-          <!--Grid column-->
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-6 mb-4">
+            <!--Card content-->
+            <mdb-card-body>
+              <a class="activator px-3 mr-2 black-text" routerLink="wohngemeinschaften">
+                <mdb-icon fas icon="home"></mdb-icon>
+              </a>
 
-            <!--Card-->
-            <mdb-card>
-              <!--Card image-->
-              <div class="view overlay waves-light card-img-220" mdbWavesEffect>
-                <img src="/assets/media/card/card-home-2.jpg" class="card-img-top" alt="">
-                <a routerLink="wohngemeinschaften" target="_blank">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
+              <!--Title-->
+              <mdb-card-title>
+                <h4>Senioren-WG</h4>
+              </mdb-card-title>
 
-              <!--Card content-->
-              <mdb-card-body>
-                <a class="activator px-3 mr-2">
-                  <mdb-icon fas icon="home"></mdb-icon>
-                </a>
+              <hr>
 
-                <!--Title-->
-                <mdb-card-title>
-                  <h4>Senioren-Wohngemeinschaften</h4>
-                </mdb-card-title>
+              <mdb-card-text class="text-section">
+                Wer in einer Senioren-WG wohnt, die ambulant betreut wird, kann nicht nur von einer fürsorglichen und
+                fachkundigen Pflege profitieren. Vielmehr können die Bewohner immer selbst entscheiden ...
+                <nobr><a class="black-text" routerLink="wohngemeinschaften"><mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon> weiter lesen
+                </a></nobr>
+              </mdb-card-text>
+            </mdb-card-body>
+            <div class="text-center align-bottom footer-card">
+              <button mdbBtn class="waves-light" style="background-color: #ffea00" [rounded]="true" [rounded]="true" routerLink="wohngemeinschaften" mdbWavesEffect>
+                <mdb-icon fas icon="home" class="mr-1"></mdb-icon>Senioren-WG
+              </button>
+<!--              <button mdbBtn class="waves-light" size="sm" gradient="peach" [rounded]="true" mdbWavesEffect>
+                <mdb-icon fas icon="home" class="mr-1"></mdb-icon>Verfügbarkeit  prüfen
+              </button>-->
+            </div>
+          </mdb-card>
+          <mdb-card>
+            <!--Card image-->
+            <div class="view overlay waves-light card-img-220" mdbWavesEffect>
+              <img src="/assets/media/card/card-home-3.jpg" class="card-img-top" alt="">
+              <a routerLink="wohngemeinschaften"><div class="mask rgba-white-slight"></div></a>
+            </div>
 
-                <hr>
+            <!--Card content-->
+            <mdb-card-body>
+              <a class="activator px-3 mr-2 black-text" routerLink="about">
+                <mdb-icon fas icon="users"></mdb-icon>
+              </a>
 
-                <mdb-card-text>
-                  Wer in einer Senioren-WG wohnt, die ambulant betreut wird, kann nicht nur von einer fürsorglichen und
-                  fachkundigen Pflege profitieren. Vielmehr können die Bewohner immer selbst entscheiden ...
-                </mdb-card-text>
+              <!--Title-->
+              <mdb-card-title>
+                <h4>Über uns</h4>
+              </mdb-card-title>
 
-                <a class="link-text black-text d-flex justify-content-end" routerLink="wohngemeinschaften">
-                  <h5 class="waves-light" mdbWavesEffect>Mehr erfahren
-                    <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon>
-                  </h5>
-                </a>
-              </mdb-card-body>
-            </mdb-card>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
+              <hr>
 
-            <!--Card-->
-            <mdb-card>
-              <!--Card image-->
-              <div class="view overlay waves-light card-img-220" mdbWavesEffect>
-                <img src="/assets/media/card/card-home-3.jpg" class="card-img-top" alt="">
-                <a routerLink="about" target="_blank">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-
-              <!--Card content-->
-              <mdb-card-body>
-                  <a class="activator px-3 mr-2">
-                    <mdb-icon fas icon="users"></mdb-icon>
-                  </a>
-
-                  <!--Title-->
-                  <mdb-card-title>
-                    <h4>Über uns</h4>
-                  </mdb-card-title>
-
-                <hr>
-
-                  <mdb-card-text>
-                    Wir können auf über 15 Jahre der Erfahrung im Pflegebereich zurückblicken und stehen Ihnen mit unserem geballten Know-how zur Seite. Unsere examinierten Pflegefachkräfte bringen ...
-                  </mdb-card-text>
-
-                  <a class="link-text black-text d-flex justify-content-end" routerLink="about">
-                    <h5 class="waves-light" mdbWavesEffect>Mehr erfahren
-                      <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon>
-                    </h5>
-                  </a>
-              </mdb-card-body>
-            </mdb-card>
-          </div>
+              <mdb-card-text>
+                Wir können auf über 15 Jahre der Erfahrung im Pflegebereich zurückblicken und stehen Ihnen mit unserem
+                geballten Know-how zur Seite. Unsere examinierten Plegekräften ...
+                <nobr><a class="black-text" routerLink="about"><mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon> weiter lesen
+              </a></nobr>
+              </mdb-card-text>
+            </mdb-card-body>
+            <div class="text-center align-bottom footer-card">
+              <button mdbBtn class="waves-light" style="background-color: #ffea00" [rounded]="true" routerLink="about" mdbWavesEffect>
+                <mdb-icon fas icon="users" class="mr-1"></mdb-icon>Über uns
+              </button>
+            </div>
+          </mdb-card>
         </div>
-
-        <hr>
-
-
-
 <!--          <div class="row">
             <div class="col-md-6 mb-4">
               <div class="card narrower">

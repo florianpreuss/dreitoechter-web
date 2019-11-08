@@ -1,28 +1,98 @@
 <div class="modal-content">
   <div class="modal-c-tabs">
-    <mdb-tabset [buttonClass]="'nav md-tabs tabs-2 warning-color'" [contentClass]="''" class="tab-content">
+    <mdb-tabset #staticTabs [buttonClass]="'nav md-tabs tabs-2 contact-nav'" style="background-color: #ffc107!important;" [contentClass]="''" class="tab-content">
       <mdb-tab class="tab-pane fade in show active" id="panel1" role="tabpanel"
-               heading="<i class='fas fa-envelope'> </i> Nachricht senden">
+               heading="<i class='fas fa-phone-alt'> </i> Anrufen">
+
         <div class="modal-body mb-1">
-          <form [formGroup]="validatingForm">
+          <div class="text-center">
+            <div class="mb-2">
+              <mdb-icon fas icon="phone" size="4x" class="darky-grey-text"></mdb-icon>
+
+              <p class="font-weight-bold my-3 call-bold">Telefon Nummer</p>
+
+              <p class="text-muted call-bold">030 - 450 276 16</p>
+
+              <p class="font-weight-bold dark-red-text call-bold"><mdb-icon fas icon="bolt" class="mr-1"></mdb-icon>Dauerhafte Rufbereitschaft</p>
+            </div>
+
+            <hr style="margin-bottom: 1.5rem; margin-top: 1.5rem">
+
+            <div class="row align-items-end">
+              <div class="col-lg-4">
+                <a (click)="onMessage()"><mdb-icon fas icon="envelope" size="2x" class="grey-text"></mdb-icon>
+                  <p class="text-muted mt-1 mb-0">Nachricht senden</p>
+                </a>
+              </div>
+              <div class="col-lg-4">
+                <mdb-icon fas icon="fax" size="3x" class="darky-grey-text"></mdb-icon>
+                <p class="font-weight-bold my-1">Fax Nummer</p>
+                <p class="text-muted" style="margin-bottom: 0">030 - 450 276 17</p>
+              </div>
+              <div class="col-lg-4">
+                <a (click)="onMeeting()"><mdb-icon fas icon="calendar-alt" size="2x" class="grey-text"></mdb-icon>
+                  <p class="text-muted mt-1 mb-0">Termin vereinbaren</p>
+                </a>
+              </div>
+            </div>
+          </div>
+<!--          <section class="team-section text-center my-4 mr-5 ml-5 pl-5 pr-5">
+
+            &lt;!&ndash; Grid row &ndash;&gt;
+            <h5>Gesprächspartner</h5>
+            <div class="row mt-4 ml-3 mr-3">
+
+              &lt;!&ndash; Grid column &ndash;&gt;
+              <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                <div class="avatar mx-auto">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle z-depth-1"
+                       alt="Sample avatar" style="max-height: 100px">
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                <div class="avatar mx-auto">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle z-depth-1"
+                       alt="Sample avatar" style="max-height: 100px">
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-md-0 mb-5">
+                <div class="avatar mx-auto">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" class="rounded-circle z-depth-1"
+                       alt="Sample avatar" style="max-height: 100px">
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="avatar mx-auto">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" class="rounded-circle z-depth-1"
+                       alt="Sample avatar"  style="max-height: 100px">
+                </div>
+              </div>
+            </div>
+          </section>-->
+        </div>
+
+      </mdb-tab>
+      <mdb-tab class="tab-pane fade" id="panel2" role="tabpanel" heading="<i class='fas fa-envelope'> </i> Nachricht senden">
+        <div class="modal-body mb-1">
+          <form [formGroup]="validatingMessageForm">
             <div class="md-form mb-5">
               <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
-              <input type="text" id="form34" class="form-control" mdbInput
-                     [formControl]="contactFormModalName">
-              <label for="form34">Name</label>
+              <input type="text" id="form21" class="form-control" mdbInput
+                     [formControl]="messageFormModalName">
+              <label for="form21">Name</label>
             </div>
 
             <div class="md-form mb-5">
               <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
-              <input type="email" id="form29" class="form-control" mdbInput
-                     [formControl]="contactFormModalEmail">
-              <label for="form29">E-Mail</label>
+              <input type="email" id="form22" class="form-control" mdbInput
+                     [formControl]="messageFormModalEmail">
+              <label for="form22">E-Mail</label>
             </div>
 
             <div class="md-form">
               <mdb-icon fas icon="pencil-alt" class="prefix grey-text"></mdb-icon>
-              <textarea type="text" id="form8" class="md-textarea form-control" rows="2" mdbInput></textarea>
-              <label for="form8">Nachricht</label>
+              <textarea type="text" id="form23" class="md-textarea form-control" rows="2" mdbInput [formControl]="messageFormModalMessage"></textarea>
+              <label for="form23">Nachricht</label>
             </div>
 
             <div class="text-center form-group mt-4">
@@ -30,25 +100,61 @@
             </div>
           </form>
 
-          <div class="text-center mt-2">
-            <button mdbBtn color="warning" class="waves-light" mdbWavesEffect
-                    (click)="onSend()">Senden
-              <mdb-icon far icon="paper-plane" class="ml-1"></mdb-icon>
-            </button>
+          <div class="md-form text-center mt-2">
+            <div>
+              <button #btnSend mdbBtn color="warning" class="waves-light" mdbWavesEffect
+                      (click)="onSend()" [disabled]="btnSendMessageDisabled">Senden
+                <mdb-icon far icon="paper-plane" class="ml-1"></mdb-icon>
+              </button>
+            </div>
+<!--            <mdb-error class="custom-error-message"
+                         *ngIf="btnSendMessageDisabled">
+                Überprüfe deine Eingaben!
+            </mdb-error>-->
           </div>
         </div>
       </mdb-tab>
-      <mdb-tab class="tab-pane fade" id="panel2" role="tabpanel" heading="<i class='fas fa-phone-alt'> </i> Anrufen">
+      <mdb-tab class="tab-pane fade" id="panel3" role="tabpanel"
+               heading="<i class='fas fa-user'> </i> Termin vereinbaren">
         <div class="modal-body mb-1">
-          <form [formGroup]="validatingForm">
+          <form [formGroup]="validatingMeetingForm">
+            <div class="md-form mb-5">
+              <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
+              <input type="text" id="form31" class="form-control" mdbInput
+                     [formControl]="meetingFormModalName">
+              <label for="form31">Name</label>
+            </div>
 
-          </form>
-        </div>
-      </mdb-tab>
-      <mdb-tab class="tab-pane fade" id="panel3" role="tabpanel" heading="<i class='fas fa-user'> </i> Termin vereinbaren">
-        <div class="modal-body mb-1">
-          <form [formGroup]="validatingForm">
-
+            <div class="md-form mb-5">
+              <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
+              <input type="email" id="form32" class="form-control" mdbInput
+                     [formControl]="meetingFormModalEmail">
+              <label for="form32">E-Mail</label>
+            </div>
+            <div class="md-form mb-5">
+              <mdb-icon fas icon="calendar-alt" class="prefix grey-text"></mdb-icon>
+              <input type="email" id="form33" class="form-control" mdbInput
+                     [formControl]="">
+              <label for="form33">Datum</label>
+            </div>
+<!--            <div class="row">
+              <div class="col-md-6 md-form mb-5">
+                <mdb-icon fas icon="calendar-alt" class="prefix grey-text"></mdb-icon>
+                <input type="date" id="form33" class="form-control" mdbInput
+                       [formControl]="meetingFormModalDate">
+                <label for="form33">Datum</label>
+              </div>
+              <div class="col-md-6 md-form mb-5">
+                <mdb-icon fas icon="clock" class="prefix grey-text"></mdb-icon>
+                <mdb-time-picker
+                  [buttonLabel]="'Done'"
+                  [twelvehour]="false"
+                  [darktheme]="true"
+                  [label]="'Uhrzeit'"
+                  [ngModel]="">
+                </mdb-time-picker>
+              </div>
+            </div>-->
           </form>
         </div>
       </mdb-tab>

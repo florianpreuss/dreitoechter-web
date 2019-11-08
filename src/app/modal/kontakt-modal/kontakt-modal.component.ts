@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {MDBModalRef, MDBModalService} from 'ng-uikit-pro-standard';
+import {IMyOptions, MDBModalRef, MDBModalService, TabsetComponent} from 'ng-uikit-pro-standard';
 
 @Component({
   selector: 'app-contact-modal',
@@ -9,33 +9,70 @@ import {MDBModalRef, MDBModalService} from 'ng-uikit-pro-standard';
 })
 export class KontaktModalComponent implements OnInit {
 
-  validatingForm: FormGroup;
+  @ViewChild('staticTabs', { static: true }) staticTabs: TabsetComponent;
 
-  successModal: MDBModalRef;
+  validatingMessageForm: FormGroup;
+  validatingMeetingForm: FormGroup;
 
-  constructor(public modalRef: MDBModalRef, private modalService: MDBModalService) {}
+  btnSendMessageDisabled = false;
+
+  constructor(private modalService: MDBModalService) {}
 
   ngOnInit() {
-    this.validatingForm = new FormGroup({
-      contactFormModalName: new FormControl('', Validators.required),
-      contactFormModalEmail: new FormControl('', Validators.email),
-      contactFormModalMessage: new FormControl('', Validators.required),
+    this.validatingMessageForm = new FormGroup({
+      messageFormModalName: new FormControl('', Validators.required),
+      messageFormModalEmail: new FormControl('', Validators.email),
+      messageFormModalMessage: new FormControl('', Validators.required),
+    });
+    this.validatingMeetingForm = new FormGroup({
+      meetingFormModalName: new FormControl('', Validators.required),
+      meetingFormModalEmail: new FormControl('', Validators.email),
+      meetingFormModalDate: new FormControl('', Validators.required),
+      meetingFormModalTime: new FormControl('', Validators.required),
     });
   }
 
   onSend() {
-    this.modalRef.hide();
+/*    if (this.contactFormModalName || this.contactFormModalEmail.invalid || this.contactFormModalMessage.invalid) {
+      this.btnSendMessageDisabled = true;
+      return;
+    }*/
   }
 
-  get contactFormModalName() {
-    return this.validatingForm.get('contactFormModalName');
+  onMessage() {
+    this.staticTabs.setActiveTab(2);
   }
 
-  get contactFormModalEmail() {
-    return this.validatingForm.get('contactFormModalEmail');
+  onMeeting() {
+    this.staticTabs.setActiveTab(3);
   }
 
-  get contactFormModalMessage() {
-    return this.validatingForm.get('contactFormModalMessage');
+  get messageFormModalName() {
+    return this.validatingMessageForm.get('messageFormModalName');
+  }
+
+  get messageFormModalEmail() {
+    return this.validatingMessageForm.get('messageFormModalEmail');
+  }
+
+  get messageFormModalMessage() {
+    return this.validatingMessageForm.get('messageFormModalMessage');
+  }
+
+
+  get meetingFormModalName() {
+    return this.validatingMessageForm.get('meetingFormModalName');
+  }
+
+  get meetingFormModalEmail() {
+    return this.validatingMessageForm.get('meetingFormModalEmail');
+  }
+
+  get meetingFormModalDate() {
+    return this.validatingMessageForm.get('meetingFormModalDate');
+  }
+
+  get meetingFormModalTime() {
+    return this.validatingMessageForm.get('meetingFormModalTime');
   }
 }

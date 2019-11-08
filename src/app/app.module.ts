@@ -22,7 +22,6 @@ import { WohngemeinschaftenComponent } from './wohngemeinschaften/wohngemeinscha
 import { AboutComponent } from './about/about.component';
 import { AktuellesComponent } from './aktuelles/aktuelles.component';
 import {KontaktModalComponent} from './modal/kontakt-modal/kontakt-modal.component';
-import { SuccessModalComponent } from './modal/success-modal/success-modal.component';
 import { ImpressumModalComponent } from './modal/impressum-modal/impressum-modal.component';
 
 declare var Hammer: any;
@@ -61,7 +60,6 @@ export class MobileHammerConfig extends HammerGestureConfig {
     AboutComponent,
     AktuellesComponent,
     KontaktModalComponent,
-    SuccessModalComponent,
     ImpressumModalComponent
   ],
   imports: [
@@ -82,8 +80,7 @@ export class MobileHammerConfig extends HammerGestureConfig {
   ],
   entryComponents: [
     KontaktModalComponent,
-    ImpressumModalComponent,
-    SuccessModalComponent
+    ImpressumModalComponent
   ],
   providers: [
     MDBSpinningPreloader,

@@ -2,7 +2,7 @@
   max-height: 650px;
 }
 .card-img-220 {
-  height: 220px;
+  max-height: 220px;
 }
 .page-layout {
   background-color: #ffea00;
@@ -25,4 +25,18 @@
   height:100%;
   width:100%;
   position:absolute;
+}
+.text-section {
+  margin-bottom: 0.5rem ;
+}
+.footer-card {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.btn {
+  margin-top: auto;
+}
+.card-body {
+  padding-bottom: 0.6rem;
 }
